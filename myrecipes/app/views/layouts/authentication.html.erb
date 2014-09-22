@@ -32,7 +32,7 @@
       <ul class="nav navbar-nav pull-right">
         <% if user_signed_in? %>
             <li><%=link_to "#{current_user.email}" %></li>
-            <li class="active"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+            <li class="active"><%= link_to "Logout", destroy_user_session_path%></li>
         <%else%>
             <li><%= link_to "Login", new_user_session_path %></li>
             <li class="active"><%= link_to "SignUp", new_user_registration_path%></li>
@@ -42,27 +42,6 @@
   </div>
   <div class="row">
     <div class="col-lg-2">
-      <div class="panel panel-primary" id="panels">
-        <div class="panel-heading">Food Prefernces
-        </div>
-        <% @food_preferences.each do |fp| %>
-            <p><%= fp.name%></p>
-        <%end%>
-      </div>
-      <div class="panel panel-primary" id="panels">
-        <div class="panel-heading">Food Type
-        </div>
-        <% @food_types.each do |ft| %>
-            <p><%= ft.name%></p>
-        <%end%>
-      </div>
-      <div class="panel panel-primary" id="panels">
-        <div class="panel-heading">Cuisine
-        </div>
-        <% @cuisines.each do |c| %>
-            <p><%= c.name%></p>
-        <%end%>
-      </div>
     </div>
     <div class="col-lg-9">
       <%= yield %>

@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # .first_or_create checks if records already exist and will preclude duplicates
-food_types = ["Curry", "Dessert", "Sides","Breakfast"]
+food_types = ["Curry", "Dessert", "Sides","Breakfast", "Main-Course"]
 food_types.each{|d| FoodType.where(:name => d).first_or_create}
 
 food_preferences = ["Vegetarian", "Vegan", "Meat","Dairy"]
